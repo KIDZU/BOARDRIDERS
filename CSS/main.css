@@ -12,11 +12,17 @@ body {
   background: #000;
   font-weight: 500;
 }
+
 .delivery_panel_info {
   display: flex;
   font-size: 12px;
   padding-top: 15px;
   padding-bottom: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.delivery_panel_info_container {
+  display: flex;
   align-items: center;
 }
 .delivery_panel_info_region_text {
@@ -34,7 +40,6 @@ body {
 }
 .delivery_panel_info_delivery_links {
   color: white;
-  margin-left: 209px;
   display: flex;
   align-items: center;
 }
@@ -84,7 +89,12 @@ body {
   width: 24px;
   height: 24px;
 }
-
+.nav_block_func:hover path {
+  fill: #333333;
+}
+.nav_block_func:hover {
+  color: #333333;
+}
 .nav_block_func {
   display: flex;
   flex-direction: column;
@@ -110,6 +120,10 @@ body {
 .sale_slider_switches {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .sale_slider_switches_switch {
   display: flex;
@@ -119,7 +133,6 @@ body {
   align-items: center;
   background: white;
   position: absolute;
-  top: 50%;
 
   cursor: pointer;
 }
@@ -135,28 +148,38 @@ body {
   height: 21.73px;
 }
 .sale_slider_card {
-  background-image: url(../IMG/HEader/slider/bg.png);
-  width: 80vw;
+  background: url(../IMG/HEader/slider/bg.png) no-repeat;
+  background-size: 100%;
+  width: 100%;
   height: 482px;
   position: relative;
 }
 .sale_slider_card_info {
   background: rgba(0, 0, 0, 1);
   color: white;
-  margin: 316px 705px 76px 0;
   position: absolute;
   padding: 16px 35px 16px 35px;
   font-size: 48px;
   font-weight: 700;
+  bottom: 72px;
 }
 .group {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.group img {
+  width: 100%;
+}
 .stocks {
   display: flex;
-  gap: 26px;
+  justify-content: space-between;
   margin-bottom: 100px;
+}
+.stocks_block {
+  width: 48%;
+}
+.stocks_block_elements img {
+  width: 100%;
 }
 .stocks_block_elements_text {
   background: black;
@@ -180,7 +203,7 @@ body {
 .novelty_slider {
   position: relative;
   display: flex;
-  gap: 25px;
+  justify-content: space-between;
   margin-bottom: 75px;
 }
 .novelty_slider_card_picture {
@@ -242,6 +265,9 @@ body {
   color: black;
   font-weight: 500;
   margin-bottom: 75px;
+}
+.promotion img {
+  width: 100%;
 }
 .promotion_text {
   display: flex;
@@ -329,8 +355,7 @@ body {
 }
 .discount_blocks {
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  justify-content: space-between;
 }
 .discount_blocks_block,
 .discount_blocks_mail {
@@ -338,15 +363,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   width: 48%;
   padding: 290px 120px 250px;
 }
 .discount_blocks_block {
   background: url(../IMG/dicont/bg1.png) no-repeat;
+  background-size: 100% 100%;
 }
 .discount_blocks_mail {
   background: url(../IMG/dicont/bg2.png) no-repeat;
+  background-size: 100% 100%;
 }
 .discount_blocks_logo {
   width: 152px;
@@ -408,7 +434,8 @@ body {
   right: 12px;
 }
 .footer {
-  background: url(../IMG/footer/bg.png);
+  background: url(../IMG/footer/bg.png) no-repeat;
+  background-size: 100%;
 }
 .footer_newsletter {
   padding-top: 145px;
@@ -518,7 +545,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 .footer_icons {
   font-size: 12px;
